@@ -1,6 +1,7 @@
 BUNDLER_VERSION = 1.15.1
 BUNDLE = bundle _${BUNDLER_VERSION}_
 JEKYLL = ${BUNDLE} exec jekyll
+HTML_PROOFER = ${BUNDLE} exec htmlproofer
 
 dev:
 	code .
@@ -9,6 +10,10 @@ dev:
 
 clean:
 	rm -rf _site local-generated generated_site
+
+check-links:
+	${HTML_PROOFER} ./local-generated \
+		--url-ignore "/\/archives/*/,/docs/*/api/*"
 
 setup:
 	gem install bundler \
