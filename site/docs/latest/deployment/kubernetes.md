@@ -118,8 +118,18 @@ $﻿kubectl run -i --tty --attach dice --image=caiok/bookkeeper-tutorial --env Z
 ```
 
 An example output of Dice instance is like this:
-```aidl
-➜ $ kubectl run -i --tty --attach dice --image=caiok/bookkeeper-tutorial --env ZOOKEEPER_SERVERS="zk-0.zookeeper"          
+
+```bash
+$ kubectl run -i \
+  --tty \
+  --attach dice \
+  --image=caiok/bookkeeper-tutorial \
+  --env ZOOKEEPER_SERVERS="zk-0.zookeeper"
+```
+
+You should see output like this:
+
+```        
 If you don't see a command prompt, try pressing enter.
 Value = 1, epoch = 5, leading
 Value = 2, epoch = 5, leading
