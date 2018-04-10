@@ -20,9 +20,13 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-This documentation is for Apache BookKeeper&trade; version {{ site.latest_version }}.
+Welcome to the documentation for Apache BookKeeper&trade; version **{{ site.latest_version }}**.
+
+## What is Apache BookKeeper?
 
 Apache BookKeeper&trade; is a scalable, fault-tolerant, low-latency storage service optimized for real-time workloads. It offers durability, replication, and strong consistency as essentials for building reliable real-time applications.
+
+### Use cases
 
 BookKeeper is suitable for a wide variety of use cases, including:
 
@@ -40,19 +44,23 @@ Learn more about Apache BookKeeper&trade; and what it can do for your organizati
 
 Or start [using](../../getting-started/installation) Apache BookKeeper today.
 
-### Users
+## Users
 
-- **Concepts**: Start with [concepts](../../getting-started/concepts). This will help you to fully understand
-    the other parts of the documentation, including the setup, integration and operation guides.
-- **Getting Started**: Install [Apache BookKeeper](../../getting-started/installation) and run bookies [locally](../../getting-started/run-locally)
-- **API**: Read the [API](../../api/overview) documentation to learn how to use Apache BookKeeper to build your applications.
-- **Deployment**: The [Deployment Guide](../../deployment/manual) shows how to deploy Apache BookKeeper to production clusters.
+Domain | Where to start
+:------|:--------------
+Concepts | Study up on BookKeeper's [concepts and architecture](../../getting-started/concepts). This will help you to fully understand the other parts of the documentation, including the setup, integration and operation guides.
+Getting started | Install [Apache BookKeeper](../../getting-started/installation) and run bookies [locally](../../getting-started/run-locally)
+API | Read the [API](../../api/overview) documentation to learn how to use Apache BookKeeper to build your applications.
+Deployment | The [Deployment Guide](../../deployment/manual) shows how to deploy Apache BookKeeper to production clusters.
 
-### Administrators
+## Administrators
 
-- **Operations**: The [Admin Guide](../../admin/bookies) shows how to run Apache BookKeeper on production, what are the production
-    considerations and best practices.
+Domain | Where to start
+:------|:--------------
+Operations | The [Admin Guide](../../admin/bookies) shows how to run Apache BookKeeper on production, what are the production considerations and best practices.
 
-### Contributors
+## Contributors
 
-- **Details**: Learn [design details](../../development/protocol) to know more internals.
+Domain | Where to start
+:------|:--------------
+BookKeeper's design | Learn [design details](../../development/protocol) to know more internals.
