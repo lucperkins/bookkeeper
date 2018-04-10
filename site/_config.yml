@@ -55,7 +55,7 @@ defaults:
   values:
     layout: community
 
-gems:
+plugins:
 - jekyll-toc
 
 exclude:
