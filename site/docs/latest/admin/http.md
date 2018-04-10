@@ -2,8 +2,7 @@
 title: BookKeeper Admin REST API
 ---
 
-This document introduces BookKeeper HTTP endpoints, which can be used for BookKeeper administration.
-To use this feature, set `httpServerEnabled` to `true` in file `conf/bk_server.conf`.
+This document introduces BookKeeper HTTP endpoints, which can be used for BookKeeper administration. To use this feature, set `httpServerEnabled` to `true` in the [`conf/bk_server.conf`](../../reference/config) configuration file.
 
 ## All the endpoints
 
