@@ -33,7 +33,7 @@ latest_javadoc:
 staging: clean
 	$(JEKYLL) build --config _config.yml,_config.staging.yml
 
-serve: build
+serve:
 	$(JEKYLL) serve \
 		--incremental \
 		--livereload \
