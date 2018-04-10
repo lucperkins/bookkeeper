@@ -99,7 +99,7 @@ $ zk-shell localhost 2181
 
 Once ZooKeeper cluster is Running, you can then deploy the bookies. You can deploy the bookies either using a [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) or a [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/).
 
-> NOTE: _DaemonSet_ vs _StatefulSet_
+> ### DaemonSets vs StatefulSets
 >
 > A _DaemonSet_ ensures that all (or some) nodes run a pod of bookie instance. As nodes are added to the cluster, bookie pods are added automatically to them. As nodes are removed from the
 > cluster, those bookie pods are garbage collected. The bookies deployed in a DaemonSet stores data on the local disks on those nodes. So it doesn't require any external storage for Persistent
@@ -132,12 +132,12 @@ While all BookKeeper pods is Running, by zk-shell you could find all available b
 You could also run a [bookkeeper tutorial](https://github.com/ivankelly/bookkeeper-tutorial/) instance, which named as 'dice' here, in this bookkeeper cluster.
 
 ```bash
-$﻿kubectl run -i --tty --attach dice --image=caiok/bookkeeper-tutorial --env ZOOKEEPER_SERVERS="zk-0.zookeeper"
+$ kubectl run -i --tty --attach dice --image=caiok/bookkeeper-tutorial --env ZOOKEEPER_SERVERS="zk-0.zookeeper"
 ```
 
-An example output of Dice instance is like this:
-```aidl
-➜ $ kubectl run -i --tty --attach dice --image=caiok/bookkeeper-tutorial --env ZOOKEEPER_SERVERS="zk-0.zookeeper"          
+The output from the Dice instance may look like this:
+
+```
 If you don't see a command prompt, try pressing enter.
 Value = 1, epoch = 5, leading
 Value = 2, epoch = 5, leading
@@ -156,26 +156,26 @@ Value = 2, epoch = 5, leading
 
 ### Un-Deploy
 
-Delete Demo dice instance
+Delete the demo dice instance:
 
 ```bash
-$﻿kubectl delete deployment dice      
+$ kubectl delete deployment dice
 ```
 
-Delete BookKeeper
+Delete BookKeeper:
+
 ```bash
-$ kubectl delete -f bookkeeper.yaml    
+$ kubectl delete -f bookkeeper.yaml
 ```
 
-Delete ZooKeeper
+Delete ZooKeeper:
+
 ```bash
-$ kubectl delete -f zookeeper.yaml    
+$ kubectl delete -f zookeeper.yaml
 ```
 
-Delete cluster
+Delete the whole GKE cluster:
+
 ```bash
-$ gcloud container clusters delete bookkeeper-gke-cluster    
+$ gcloud container clusters delete bookkeeper-gke-cluster
 ```
-
-
-

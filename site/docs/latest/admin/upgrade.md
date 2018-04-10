@@ -1,8 +1,8 @@
 ---
-title: Upgrade
+title: Upgrading BookKeeper
 ---
 
-> If you have questions about upgrades (or need help), please feel free to reach out to us by [mailing list]({{ site.baseurl }}community/mailing-lists) or [Slack Channel]({{ site.baseurl }}community/slack).
+> If you have questions about upgrades (or need help), please feel free to reach out to us via the [mailing list](../../../../community/mailing-lists) or [Slack Channel](../../../../community/slack).
 
 ## Overview
 
@@ -25,8 +25,8 @@ You can follow below steps on how to canary a upgraded version:
 
 1. Stop a Bookie.
 2. Upgrade the binary and configuration.
-3. Start the Bookie in `ReadOnly` mode. This can be used to verify if the Bookie of this new version can run well for read workload.
-4. Once the Bookie is running at `ReadOnly` mode successfully for a while, restart the Bookie in `Write/Read` mode.
+3. Start the Bookie in read-only mode. This can be used to verify if the Bookie of this new version can run well for read workload.
+4. Once the Bookie is running at read-only mode successfully for a while, restart the Bookie in write/read mode.
 5. After step 4, the Bookie will serve both write and read traffic.
 
 ### Rollback Canaries
@@ -43,7 +43,7 @@ are allowed to talk to old bookies; if clients are not allowed to talk to old bo
 2. Decide on performing a rolling upgrade or a downtime upgrade.
 3. Upgrade all Bookies (more below)
 4. If autorecovery was disabled during upgrade, [enable autorecovery](../../reference/cli/#autorecovery-1).
-5. After all bookies are upgraded, build applications that use `BookKeeper client` against the new bookkeeper libraries and deploy the new versions.
+5. After all bookies are upgraded, build applications that use the BookKeeper client against the new BookKeeper libraries and deploy the new versions.
 
 ### Upgrade Bookies
 
